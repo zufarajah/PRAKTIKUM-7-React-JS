@@ -1,0 +1,201 @@
+/* Pengaturan default untuk light mode dan dark mode */
+body.light-mode {
+  background-color: #f0f2f5;
+  color: #000;
+}
+
+body.dark-mode {
+  background-color: #18191a;
+  color: #fff;
+}
+
+/* Card Utama untuk Task */
+.task-card {
+  background: #ffffff;
+  box-shadow: 0px 6px 58px rgba(196, 203, 214, 0.1);
+  border-radius: 24px;
+  padding: 22px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .task-card {
+  background-color: #242526;
+  color: #ddd;
+}
+
+/* Detail Nama Task */
+.task-details {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nama Task yang Lebih Jelas */
+.task {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000; /* Warna untuk light mode */
+}
+
+body.dark-mode .task {
+  color: #ffffff; /* Warna untuk dark mode */
+}
+
+/* Judul Prioritas */
+.priority-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #7d8592;
+  margin-bottom: 7px;
+}
+
+/* Warna Prioritas */
+.priority {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.high-priority {
+  color: #ff4d4f;
+}
+
+.medium-priority {
+  color: #ffa940;
+}
+
+.low-priority {
+  color: #28a745;
+}
+
+/* Wrapper untuk Status */
+.task-status-wrapper {
+  width: 100px;
+  text-align: center;
+}
+
+body.dark-mode .task-status-wrapper {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #b0b3b8;
+}
+
+/* Status Task */
+.status {
+  background: rgba(125, 133, 146, 0.14);
+  border-radius: 8px;
+  padding: 7px 14px;
+  color: #7d8592;
+  font-weight: 700;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+body.dark-mode .status {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #b0b3b8;
+}
+
+/* Wrapper untuk Progress Bar */
+.progress {
+  margin-top: 0;
+}
+
+/* Wrapper untuk Aksi (Edit/Delete) */
+.actions {
+  display: flex;
+  gap: 15px;
+}
+
+.icon-button .btn {
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.icon-button .btn i {
+  color: #6c757d;
+}
+
+.icon-button .btn:hover i {
+  color: #6f42c1;
+}
+
+.icon-button .btn-danger i {
+  color: #ff4d4f;
+}
+
+.icon-button .btn-danger:hover i {
+  color: #d9534f;
+}
+
+/* Tombol "Add Task" */
+.add-task-btn {
+  background-color: #6f42c1;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.add-task-btn:hover {
+  background-color: #5a3798;
+}
+
+/* Tombol Dark Mode Toggle */
+.dark-mode-toggle {
+  margin-left: 10px;
+  background-color: #6c757d;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #565e64;
+}
+
+body.dark-mode .dark-mode-toggle {
+  background-color: #4c4f52;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+  background-color: #3a3d40;
+}
+
+/* TaskForm modal styling */
+.task-form-modal .form-control {
+  border-radius: 8px;
+}
+
+.task-form-modal .btn-add {
+  background-color: #6f42c1;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .task-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .priority-title,
+  .task-status-wrapper,
+  .progress,
+  .actions {
+    margin-top: 15px;
+  }
+
+  .task-status-wrapper {
+    text-align: left;
+  }
+}
